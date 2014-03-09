@@ -6,29 +6,27 @@
  * \brief Ligne de tramway
  * \author Sylvain_Albasser
  * \date 22/02/2014 (creation)
- * \date 06/03/2014 (derniere modification)
+ * \date 09/03/2014 (derniere modification)
  * \version 0.1
  */
 
 #include "Station.hpp"
 
-class LineStation
-{
-    friend class Line;
-    private:
-        LineStation(Station* station) : m_station(station), nextThere(NULL), nextBack(NULL) {}
-        Station* getInfos() const {return m_station;}
-        Station* m_station;
-        LineStation *nextThere, *nextBack;
-};
-
 class Line
 {
     public:
         Line();
+        Line(int id, int nbElem, Station** tabStation);
+        Line(const Line& line);
         ~Line();
+
+        Station* operator[](int i);
+        const Station* operator[](int i) const;
+        Line& operator=(const Line& line);
     private:
-        Station *first, *last;
+        int m_id;
+        int m_nbElem;
+        Station** m_tabStation;
 };
 
 #endif // LINE_HPP_INCLUDED

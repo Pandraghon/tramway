@@ -6,7 +6,7 @@
  * \brief Arret de Tramway
  * \author Sylvain_Albasser
  * \date 21/02/2014 (creation)
- * \date 22/02/2014 (derniere modification)
+ * \date 09/03/2014 (derniere modification)
  * \version 0.1
  */
 
@@ -22,6 +22,9 @@
 class Station
 {
     public:
+
+        Station();
+
         /**
          * \brief Constructeur
          *
