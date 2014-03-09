@@ -36,9 +36,6 @@ class Station
          */
         Station(int id, const std::string& name, int posX, int posY, int duration);
 
-        /** Destructeur par defaut */
-        ~Station();
-
 
         /** Acces a m_id
          * \return m_id : numero d'identification

@@ -10,6 +10,7 @@
  * \version 0.1
  */
 
+#include <iostream>
 #include "Station.hpp"
 
 class Line
@@ -18,7 +19,24 @@ class Line
         Line();
         Line(int id, int nbElem, Station** tabStation);
         Line(const Line& line);
-        ~Line();
+
+        int size() const { return m_nbElem; }
+
+
+        /**
+         * \brief Affichage
+         *
+         * \param[out] sout : flux de sortie
+         */
+        void display(std::ostream& sout) const;
+
+        /**
+         * \brief Affichage (via surcharge d'operateur)
+         *
+         * \param[out] sout : flux de sortie
+         * \param[in] l : ligne a afficher
+         */
+        friend std::ostream& operator<<(std::ostream& sout, const Line& l);
 
         Station* operator[](int i);
         const Station* operator[](int i) const;

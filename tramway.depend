@@ -1,35 +1,8 @@
 # depslib dependency file v1.0
-1393063910 source:c:\users\sylvain\dropbox\s4\projet_struct\tramway\filesystem.cpp
-	"filesystem.hpp"
+1394368773 source:c:\users\sapiens\dropbox\s4\projet_struct\tramway\filesystem.cpp
+	"FileSystem.hpp"
 
-1393062299 c:\users\sylvain\dropbox\s4\projet_struct\tramway\filesystem.hpp
-	<cstdlib>
-	<iostream>
-	<fstream>
-	<vector>
-	<string>
-	"Station.hpp"
-
-1393063924 source:c:\users\sylvain\dropbox\s4\projet_struct\tramway\main.cpp
-	<cstdlib>
-	<iostream>
-	<vector>
-	<string>
-	"filesystem.hpp"
-	"Station.hpp"
-
-1393063835 c:\users\sylvain\dropbox\s4\projet_struct\tramway\station.hpp
-	<cstdlib>
-	<iostream>
-	<string>
-
-1393063151 source:c:\users\sylvain\dropbox\s4\projet_struct\tramway\station.cpp
-	"Station.hpp"
-
-1394324591 source:c:\users\sapiens\dropbox\s4\projet_struct\tramway\filesystem.cpp
-	"filesystem.hpp"
-
-1394324863 c:\users\sapiens\dropbox\s4\projet_struct\tramway\filesystem.hpp
+1394365925 c:\users\sapiens\dropbox\s4\projet_struct\tramway\filesystem.hpp
 	<cstdlib>
 	<iostream>
 	<fstream>
@@ -38,58 +11,29 @@
 	"Station.hpp"
 	"Line.hpp"
 
-1394324863 c:\users\sapiens\dropbox\s4\projet_struct\tramway\station.hpp
+1394368624 c:\users\sapiens\dropbox\s4\projet_struct\tramway\station.hpp
 	<cstdlib>
 	<iostream>
 	<string>
 
-1394324696 source:c:\users\sapiens\dropbox\s4\projet_struct\tramway\main.cpp
+1394367595 c:\users\sapiens\dropbox\s4\projet_struct\tramway\line.hpp
+	<iostream>
+	"Station.hpp"
+
+1394367655 source:c:\users\sapiens\dropbox\s4\projet_struct\tramway\line.cpp
+	"Line.hpp"
+
+1394371387 source:c:\users\sapiens\dropbox\s4\projet_struct\tramway\main.cpp
 	<cstdlib>
 	<iostream>
 	<vector>
 	<string>
-	"filesystem.hpp"
-	"Station.hpp"
-
-1394324667 source:c:\users\sapiens\dropbox\s4\projet_struct\tramway\station.cpp
-	"Station.hpp"
-
-1394324863 c:\users\sapiens\dropbox\s4\projet_struct\tramway\line.hpp
-	"Station.hpp"
-
-1394127246 source:c:\users\sylvain.albasser\dropbox\s4\projet_struct\tramway\filesystem.cpp
-	"filesystem.hpp"
-
-1394141209 c:\users\sylvain.albasser\dropbox\s4\projet_struct\tramway\filesystem.hpp
-	<cstdlib>
-	<iostream>
-	<fstream>
-	<vector>
-	<string>
+	"FileSystem.hpp"
 	"Station.hpp"
 	"Line.hpp"
 
-1394126174 c:\users\sylvain.albasser\dropbox\s4\projet_struct\tramway\station.hpp
-	<cstdlib>
-	<iostream>
-	<string>
-
-1394141188 c:\users\sylvain.albasser\dropbox\s4\projet_struct\tramway\line.hpp
+1394368624 source:c:\users\sapiens\dropbox\s4\projet_struct\tramway\station.cpp
 	"Station.hpp"
-
-1394127246 source:c:\users\sylvain.albasser\dropbox\s4\projet_struct\tramway\main.cpp
-	<cstdlib>
-	<iostream>
-	<vector>
-	<string>
-	"filesystem.hpp"
-	"Station.hpp"
-
-1394125944 source:c:\users\sylvain.albasser\dropbox\s4\projet_struct\tramway\station.cpp
-	"Station.hpp"
-
-1394324882 source:c:\users\sapiens\dropbox\s4\projet_struct\tramway\line.cpp
-	"Line.hpp"
 
 1394303349 source:c:\users\sapiens\dropbox\s4\projet_struct\tramway\waitingqueue.cpp
 	"WaitingQueue.hpp"

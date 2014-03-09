@@ -6,10 +6,15 @@ Line::Line(int id, int nbElem, Station** tabStation) : m_id(id), m_nbElem(nbElem
 
 Line::Line(const Line& line) : m_id(line.m_id), m_nbElem(line.m_nbElem), m_tabStation(line.m_tabStation) {}
 
-Line::~Line()
+void Line::display(std::ostream& sout) const
 {
-    for(int i = 0 ; i < m_nbElem ; ++i)
-        m_tabStation[i] = NULL;
+    sout << "Ligne " << m_id << " - " << m_nbElem << "arrets";
+}
+
+std::ostream& operator<<(std::ostream& sout, const Line& l)
+{
+    l.display(sout);
+    return sout;
 }
 
 Station* Line::operator[](int i)

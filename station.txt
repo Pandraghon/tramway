@@ -3,10 +3,10 @@
 # Ne laissez pas de lignes incompletes !
 
 # Creation : 22:29 21/02/2014
-# Derniere modification : 20:50 06/03/2014
+# Derniere modification : 13:33 09/03/2014
 
 # Nombre de station :
-3
+6
 
 # 	Station :
 # Syntaxte a respecter :
@@ -15,3 +15,6 @@
 1	Republique		15	20	5
 2	Gare_Centrale		50	45	10
 3	Utopia			30	10	7
+4	Liberte			20	15	5
+5	Centre_ville		35	30	10
+6	Mairie			25	20	7

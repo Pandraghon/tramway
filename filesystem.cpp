@@ -10,10 +10,10 @@ FileSystem::FileSystem(const std::string& stationFile, const std::string& lineFi
 
 FileSystem::~FileSystem()
 {
-    delete[] m_tabStations;
     for(int i = 0 ; i < m_nbLines ; ++i)
         delete m_tabLines->operator[](i);
     delete[] m_tabLines;
+    delete[] m_tabStations;
 
     m_tabStations = NULL;
     m_tabLines = NULL;
@@ -82,3 +82,21 @@ bool FileSystem::loadLines(const std::string& lineFile)
     return true;
 }
 
+void FileSystem::display(std::ostream& sout) const
+{
+    sout << "Nombre d'arrets charges : " << m_nbStations << "\n\n";
+    for(int i = 0 ; i < m_nbStations ; ++i)
+        sout << "\t" << m_tabStations[i] << "\n";
+    sout << "\nNombre de lignes chargees : " << m_nbLines << "\n";
+    for(int i = 0 ; i < m_nbLines ; ++i){
+        sout << "\n\t" << m_tabLines[i] << "\n";
+        for(int j = 0 ; j < m_tabLines[i].size() ; ++j)
+            sout << "\t\t" << *(m_tabLines[i][j]) << "\n";
+    }
+}
+
+std::ostream& operator<<(std::ostream& sout, const FileSystem& fs)
+{
+    fs.display(sout);
+    return sout;
+}

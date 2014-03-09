@@ -31,6 +31,13 @@ class FileSystem
         ~FileSystem();
 
         bool isValid() const { return m_valid; }
+        int getNbStations() const { return m_nbStations; }
+        int getNbLines() const { return m_nbLines; }
+        Station* getTabStations() const { return m_tabStations; }
+        Line* getTabLines() const { return m_tabLines; }
+
+        void display(std::ostream& out) const;
+        friend std::ostream& operator<<(std::ostream& sout, const FileSystem& fs);
 
     private:
 
