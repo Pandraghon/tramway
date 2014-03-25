@@ -38,6 +38,8 @@
 		<Unit filename="Line.hpp" />
 		<Unit filename="Station.cpp" />
 		<Unit filename="Station.hpp" />
+		<Unit filename="Tramway.cpp" />
+		<Unit filename="Tramway.hpp" />
 		<Unit filename="WaitingQueue.cpp" />
 		<Unit filename="WaitingQueue.hpp" />
 		<Unit filename="main.cpp" />
