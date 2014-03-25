@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include "Station.hpp"
+#include "Tramway.hpp"
 
 class Line
 {
@@ -19,8 +20,10 @@ class Line
         Line();
         Line(int id, int nbElem, Station** tabStation);
         Line(const Line& line);
+        ~Line();
 
         int size() const { return m_nbElem; }
+        int getId() const { return m_id; }
 
 
         /**
@@ -29,6 +32,8 @@ class Line
          * \param[out] sout : flux de sortie
          */
         void display(std::ostream& sout) const;
+
+        void setFirst(Tramway* first);
 
         /**
          * \brief Affichage (via surcharge d'operateur)
@@ -41,10 +46,12 @@ class Line
         Station* operator[](int i);
         const Station* operator[](int i) const;
         Line& operator=(const Line& line);
+        Tramway* first() const { return m_first; }
     private:
         int m_id;
         int m_nbElem;
         Station** m_tabStation;
+        Tramway* m_first;
 };
 
 #endif // LINE_HPP_INCLUDED
