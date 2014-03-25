@@ -15,8 +15,9 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include "Station.hpp"
 #include "Line.hpp"
+#include "Station.hpp"
+#include "Tramway.hpp"
 
 
 /**
@@ -35,6 +36,7 @@ class FileSystem
         int getNbLines() const { return m_nbLines; }
         Station* getTabStations() const { return m_tabStations; }
         Line* getTabLines() const { return m_tabLines; }
+        Line* getLineById(int id) const;
 
         void display(std::ostream& out) const;
         friend std::ostream& operator<<(std::ostream& sout, const FileSystem& fs);
@@ -51,13 +53,22 @@ class FileSystem
         void clear(std::istream& sin);
 
         /**
+         * \brief Recuperation des trams
+         *
+         * Recupere les informations des trams contenues dans le fichier tramwayFile
+         * et les range dans une structure
+         *
+         * \param[in] tramwayFile : nom du fichier des informations
+         */
+        bool loadTramways(const std::string& tramwayFile);
+
+        /**
          * \brief Recuperation des arrets
          *
          * Recupere les informations des arrets contenues dans le fichier stationFile
          * et les range dans une structure
          *
          * \param[in] stationFile : nom du fichier des informations
-         * \param[out] station : structure des stations
          */
         bool loadStations(const std::string& stationFile);
 
@@ -68,7 +79,6 @@ class FileSystem
          * et les range dans une structure
          *
          * \param[in] lineFile : nom du fichier des informations
-         * \param[out] line : structure des lignes
          */
         bool loadLines(const std::string& lineFile);
 
@@ -76,6 +86,7 @@ class FileSystem
         int m_nbStations, m_nbLines, m_nbTramways;
         Station* m_tabStations;
         Line* m_tabLines;
+        Tramway* m_tabTramways;
 };
 
 #endif // FILESYSTEM_HPP_INCLUDED
