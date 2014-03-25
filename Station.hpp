@@ -13,6 +13,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 /**
  * \class Station
